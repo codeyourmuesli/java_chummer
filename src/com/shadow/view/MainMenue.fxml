@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<GridPane id="Hauptgrid_Button_Bar_und_Stuff" GridPane.rowSpan="4" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shadow.view.FXController">
+<GridPane id="Hauptgrid_Button_Bar_und_Stuff" GridPane.rowSpan="4" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shadow.view.FXController">
     <rowConstraints>
         <RowConstraints vgrow="NEVER" />
         <RowConstraints vgrow="NEVER" />
@@ -31,62 +32,64 @@
                 <Button text="Save" />
             </buttons>
         </ButtonBar>
-        <SplitPane id="abgrenzung_der_tab_panes" dividerPositions="0.8" orientation="HORIZONTAL" GridPane.rowIndex="2">
+        <SplitPane id="abgrenzung_der_tab_panes" dividerPositions="0.8" GridPane.rowIndex="2">
             <TabPane id="Haupt_tab_pane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.112">
                 <tabs>
-                    <Tab text="Allgemein" >
+                    <Tab text="Allgemein">
                         <content>
-                            <fx:include source="allgemein.fxml"/>
+                            <ScrollPane>
+                            <fx:include source="allgemein.fxml" />
+                            </ScrollPane>
                         </content>
                     </Tab>
                     <Tab text="Fähigkeiten">
                         <content>
-                            <fx:include source="faehigkeiten.fxml"/>
+                            <fx:include source="faehigkeiten.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Kampfkünste">
                         <content>
-                            <fx:include source="kampfkuenste.fxml"/>
+                            <fx:include source="kampfkuenste.fxml" />
                         </content>
                 </Tab>
                     <Tab text="Cyberware und Bioware">
                     <content>
-                        <fx:include source="CyberBioWare.fxml"/>
+                        <fx:include source="CyberBioWare.fxml" />
                     </content>
                 </Tab>
                     <Tab text="Strassenausrüstung">
                         <content>
-                            <fx:include source="ausruestung.fxml"/>
+                            <fx:include source="ausruestung.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Fahrzeuge und Drohnen">
                         <content>
-                            <fx:include source="FahrzeugeDrohnen.fxml"/>
+                            <fx:include source="FahrzeugeDrohnen.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Charakter Information">
                         <content>
-                            <fx:include source="CharInfo.fxml"/>
+                            <fx:include source="CharInfo.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Karma und Nuyen">
                         <content>
-                            <fx:include source="KarmaNuyen.fxml"/>
+                            <fx:include source="KarmaNuyen.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Kalender">
                         <content>
-                            <fx:include source="Kalender.fxml"/>
+                            <fx:include source="Kalender.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Notitzen">
                         <content>
-                            <fx:include source="Notitzen.fxml"/>
+                            <fx:include source="Notitzen.fxml" />
                         </content>
                     </Tab>
                     <Tab text="Verbesserungen">
                         <content>
-                            <fx:include source="Verbesserungen.fxml"/>
+                            <fx:include source="Verbesserungen.fxml" />
                         </content>
                     </Tab>
                 </tabs>
@@ -132,6 +135,7 @@
             <Text text=" Essenz" />
             <Text text="Nuyen" />
         </SplitPane>
+
     </children>
    <columnConstraints>
       <ColumnConstraints />

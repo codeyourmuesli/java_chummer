@@ -1,0 +1,15 @@
+package com.shadow.model.Gear;
+
+public enum UsedSkill {
+
+	BLADES,
+	CLUBS,
+ 	EXOTIC_WEAPONS,
+	UNARMED_OMBAT,
+	BOWS,
+	LIGHT_PISTOLS,
+	MACHINE_PISTOLS,
+	SUBMACHINE_GUNS,
+	ASSAULT_RIFLES;
+
+}

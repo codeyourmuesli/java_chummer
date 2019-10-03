@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane id="Hauptgrid_Button_Bar_und_Stuff" GridPane.rowSpan="4" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.shadow.view.FXController">
+    <rowConstraints>
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="NEVER" />
+        <RowConstraints vgrow="SOMETIMES" />
+        <RowConstraints vgrow="NEVER" />
+    </rowConstraints>
+    <children>
+        <ButtonBar maxHeight="30.0" minHeight="30.0" GridPane.rowIndex="0">
+            <buttons>
+                <Button text="eins" />
+                <Button text="Zwei" />
+                <Button text="Drei" />
+            </buttons>
+        </ButtonBar>
+        <ButtonBar maxHeight="30.0" minHeight="30.0" GridPane.rowIndex="1">
+            <buttons>
+                <Button text="Save" />
+            </buttons>
+        </ButtonBar>
+        <SplitPane id="abgrenzung_der_tab_panes" dividerPositions="0.8" orientation="HORIZONTAL" GridPane.rowIndex="2">
+            <TabPane id="Haupt_tab_pane" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.112">
+                <tabs>
+                    <Tab text="Allgemein" >
+                        <content>
+                            <fx:include source="allgemein.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Fähigkeiten">
+                        <content>
+                            <fx:include source="faehigkeiten.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Kampfkünste">
+                        <content>
+                            <fx:include source="kampfkuenste.fxml"/>
+                        </content>
+                </Tab>
+                    <Tab text="Cyberware und Bioware">
+                    <content>
+                        <fx:include source="CyberBioWare.fxml"/>
+                    </content>
+                </Tab>
+                    <Tab text="Strassenausrüstung">
+                        <content>
+                            <fx:include source="ausruestung.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Fahrzeuge und Drohnen">
+                        <content>
+                            <fx:include source="FahrzeugeDrohnen.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Charakter Information">
+                        <content>
+                            <fx:include source="CharInfo.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Karma und Nuyen">
+                        <content>
+                            <fx:include source="KarmaNuyen.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Kalender">
+                        <content>
+                            <fx:include source="Kalender.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Notitzen">
+                        <content>
+                            <fx:include source="Notitzen.fxml"/>
+                        </content>
+                    </Tab>
+                    <Tab text="Verbesserungen">
+                        <content>
+                            <fx:include source="Verbesserungen.fxml"/>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+            <TabPane id="neben_tab_pane" tabClosingPolicy="UNAVAILABLE">
+                <tabs>
+                    <Tab text="Weitere Informationen">
+                        <content>
+                            <GridPane GridPane.columnSpan="2" GridPane.rowSpan="4">
+                                <columnConstraints>
+                                    <ColumnConstraints minWidth="40" />
+                                    <ColumnConstraints maxWidth="40" minWidth="20" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="30" />
+                                    <RowConstraints maxHeight="30" />
+                                    <RowConstraints maxHeight="30" />
+                                    <RowConstraints maxHeight="30" />
+                                </rowConstraints>
+                                <children>
+                                    <Text text="Körperlicher Zustandsmonitor" GridPane.fillWidth="TRUE" />
+                                    <Text text="Geistiger Zustandsmoitor" GridPane.rowIndex="1" />
+                                    <Text text="Initiative" GridPane.rowIndex="2" />
+                                    <Text text="Initiativedurchgänge" GridPane.rowIndex="3" />
+
+                                    <TextArea text="0" GridPane.columnIndex="1" />
+                                    <TextArea text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                </children>
+                            </GridPane>
+
+                        </content>
+                    </Tab>
+                    <Tab text="Condition Monitor">
+                        <content>
+
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </SplitPane>
+        <SplitPane dividerPositions="0.5, 0.5" maxHeight="30.0" orientation="HORIZONTAL" GridPane.rowIndex="3">
+            <Text text="Karma" />
+            <Text text=" Essenz" />
+            <Text text="Nuyen" />
+        </SplitPane>
+    </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+</GridPane>

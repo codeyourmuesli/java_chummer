@@ -2,10 +2,8 @@ package com.shadow.model;
 
 public enum Algnment {
 
-	;
+	 POSITIVE,
 
-	private int POSITIVE;
-
-	private int NEGATIVE;
+	 NEGATIVE
 
 }

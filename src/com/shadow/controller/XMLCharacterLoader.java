@@ -4,18 +4,14 @@ import com.shadow.model.Character;
 import com.shadow.model.XML_Char;
 
 import javax.xml.stream.XMLEventReader;
-import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.*;
 
-public class XMLHandler {
+public class XMLCharacterLoader {
 
     private String xmlStart = "character";
     private String local_file = "chars/elfi.chum";
@@ -23,7 +19,7 @@ public class XMLHandler {
     private Character createdCharacter;
 
 
-    public XMLHandler(String configFile) {
+    public XMLCharacterLoader(String configFile) {
         // load character in loaded_char
         parseXMLFile(configFile);
         // create character out of it
@@ -36,15 +32,14 @@ public class XMLHandler {
             configFile = local_file;
             List<XML_Char> XMLChars = new ArrayList<XML_Char>();
             // First, create a new XMLInputFactory
-            XMLInputFactory inputFactory = XMLInputFactory.newInstance();
-            // Setup a new eventReader
-            InputStream in = null;
-            in = new FileInputStream(configFile);
-            XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
+            XMLEventReader eventReader = XMLLoadingHandler.GetXMLEventReader(configFile);
             // read the XML document
-            XML_Char xmlChar = new XML_Char();
+
+            //hash map for storing all the XML data
             HashMap<String, Object> myMap = new HashMap<>();
+            //for every child with sub-children, a new hashMap will be created.
             HashMap<String, Object> currentMap = myMap;
+            //for depth handling
             Stack<HashMap<String, Object>> currentPrevMaps = new Stack<>();
             Stack<String> prevAttributeNames = new Stack<>();
             String attributeName = "";
@@ -70,7 +65,6 @@ public class XMLHandler {
                     if (eventReader.peek().getEventType() == XMLStreamConstants.CHARACTERS) {
                         //so ein attribut:
                         // <name>BOD</name>
-                        //xmlChar.setXMLAttributes(key, event.asCharacters().getData());
                         String value = eventReader.peek().asCharacters().getData();
                         currentMap.put(key, value);
                     } else if (eventReader.peek().getEventType() == XMLStreamConstants.START_ELEMENT) {
@@ -126,6 +120,7 @@ public class XMLHandler {
                 }
             }
             //every xml value is loaded into myMap
+            XML_Char xmlChar = new XML_Char();
             xmlChar.setXMLAttributes(myMap);
             loaded_char = xmlChar;
         } catch (FileNotFoundException | XMLStreamException e1) {
@@ -133,9 +128,7 @@ public class XMLHandler {
         }
     }
 
-
-
-    public XML_Char getLoaded_char() {
-        return loaded_char;
+    public Character getCreatedCharacter() {
+        return createdCharacter;
     }
 }

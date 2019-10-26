@@ -1,0 +1,62 @@
+<skills>
+    <skill>
+        <id>02-001</id>
+        <name>Survival</name>
+        <skillgroup>Outdoors</skillgroup>
+        <skillcategory>Physical Active</skillcategory>
+        <knowledge>False</knowledge>
+        <exotic>False</exotic>
+        <allowdelete>False</allowdelete>
+        <attribute>WIL</attribute>
+        <source>SR4</source>
+        <page>124</page>
+    </skill>
+    <skill>
+        <id>02-002</id>
+        <name>Swimming</name>
+        <skillgroup>Athletics</skillgroup>
+        <skillcategory>Physical Active</skillcategory>
+        <knowledge>False</knowledge>
+        <exotic>False</exotic>
+        <allowdelete>False</allowdelete>
+        <attribute>STR</attribute>
+        <source>SR4</source>
+        <page>124</page>
+    </skill>
+    <skill>
+        <id>02-003</id>
+        <name>Throwing Weapons</name>
+        <skillgroup/>
+        <skillcategory>Combat Active</skillcategory>
+        <knowledge>False</knowledge>
+        <exotic>False</exotic>
+        <allowdelete>False</allowdelete>
+        <attribute>AGI</attribute>
+        <source>SR4</source>
+        <page>122</page>
+    </skill>
+    <skill>
+        <id>02-004</id>
+        <name>Tracking</name>
+        <skillgroup>Outdoors</skillgroup>
+        <skillcategory>Physical Active</skillcategory>
+        <knowledge>False</knowledge>
+        <exotic>False</exotic>
+        <allowdelete>False</allowdelete>
+        <attribute>INT</attribute>
+        <source>SR4</source>
+        <page>125</page>
+    </skill>
+    <skill>
+        <id>02-005</id>
+        <name>Software</name>
+        <skillgroup>Electronics</skillgroup>
+        <skillcategory>Technical Active</skillcategory>
+        <knowledge>False</knowledge>
+        <exotic>False</exotic>
+        <allowdelete>False</allowdelete>
+        <attribute>LOG</attribute>
+        <source>SR4</source>
+        <page>127</page>
+    </skill>
+</skills>

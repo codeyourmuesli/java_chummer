@@ -1,0 +1,51 @@
+<qualities>
+    <quality>
+        <id>01-001</id>
+        <name>Low-Light Vision</name>
+        <description>Text</description>
+        <bp>5</bp>
+        <qualitytype>Positive</qualitytype>
+        <source>RC</source>
+        <page>114</page>
+    </quality>
+
+    <quality>
+        <id>01-002</id>
+        <name>Lucky</name>
+        <description>Text2</description>
+        <bp>20</bp>
+        <qualitytype>Positive</qualitytype>
+        <source>SR4</source>
+        <page>91</page>
+    </quality>
+
+    <quality>
+        <id>01-003</id>
+        <name>Quick Healer</name>
+        <description>Text3</description>
+        <bp>10</bp>
+        <qualitytype>Positive</qualitytype>
+        <source>SR4</source>
+        <page>92</page>
+    </quality>
+
+    <quality>
+        <id>01-004</id>
+        <name>Codeblock</name>
+        <description>Text4</description>
+        <bp>5</bp>
+        <qualitytype>Negative</qualitytype>
+        <source>SR4</source>
+        <page>94</page>
+    </quality>
+
+    <quality>
+        <id>01-005</id>
+        <name>Elf Poser</name>
+        <description>Text567</description>
+        <bp>5</bp>
+        <qualitytype>Negative</qualitytype>
+        <source>SR4</source>
+        <page>94</page>
+    </quality>
+</qualities>

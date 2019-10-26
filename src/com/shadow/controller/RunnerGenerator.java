@@ -1,5 +1,6 @@
 package com.shadow.controller;
 
+import com.shadow.model.Metatyp;
 import com.shadow.view.View;
 
 /**
@@ -88,4 +89,18 @@ public class RunnerGenerator {
     private Connection[] connections;
     private ComplexForm[] complexForms;
      */
+
+    /**
+     *
+     * @param buildMethod bp or Karma
+     * @param buildPoints no. of points/Karma to spend
+     * @param maxAvail maximal availability
+     */
+    public void startCharacterCreation(String buildMethod, int buildPoints, int maxAvail){
+
+    }
+
+    public void selectMetatype(Metatyp metatyp, String metavariante){
+
+    }
 }

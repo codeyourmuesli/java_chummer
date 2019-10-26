@@ -27,6 +27,10 @@ public class Character {
 
 	private Collection<Gear> gear;
 
+	private boolean isTechnomancer;
+
+	private boolean isMage;
+
     public Character(Description description, int karmaCurrent, int karmaTotal, int prominence, int carryingCapacity, Attributes attributes, Collection<Quality> quality, Collection<Skill> skill, Collection<SkillGroup> skillGroup, Collection<Gear> gear) {
         this.description = description;
         KarmaCurrent = karmaCurrent;

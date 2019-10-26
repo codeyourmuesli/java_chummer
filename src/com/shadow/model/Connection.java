@@ -10,6 +10,7 @@ public class Connection {
 
 	private String description;
 
-	private java.lang.Character character;
+	// true = Contact, false = enemy;
+	boolean isContact;
 
 }

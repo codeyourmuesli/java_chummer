@@ -2,6 +2,7 @@
     <skill>
         <id>02-001</id>
         <name>Survival</name>
+        <description>Text31</description>
         <skillgroup>Outdoors</skillgroup>
         <skillcategory>Physical Active</skillcategory>
         <knowledge>False</knowledge>
@@ -14,6 +15,7 @@
     <skill>
         <id>02-002</id>
         <name>Swimming</name>
+        <description>Text32</description>
         <skillgroup>Athletics</skillgroup>
         <skillcategory>Physical Active</skillcategory>
         <knowledge>False</knowledge>
@@ -26,6 +28,7 @@
     <skill>
         <id>02-003</id>
         <name>Throwing Weapons</name>
+        <description>Text33</description>
         <skillgroup/>
         <skillcategory>Combat Active</skillcategory>
         <knowledge>False</knowledge>
@@ -38,6 +41,7 @@
     <skill>
         <id>02-004</id>
         <name>Tracking</name>
+        <description>Text34</description>
         <skillgroup>Outdoors</skillgroup>
         <skillcategory>Physical Active</skillcategory>
         <knowledge>False</knowledge>
@@ -50,6 +54,7 @@
     <skill>
         <id>02-005</id>
         <name>Software</name>
+        <description>Text35</description>
         <skillgroup>Electronics</skillgroup>
         <skillcategory>Technical Active</skillcategory>
         <knowledge>False</knowledge>

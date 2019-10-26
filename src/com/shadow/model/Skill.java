@@ -4,6 +4,8 @@ public class Skill {
 
 	private String name;
 
+	private String id;
+
 	private String description;
 
 	private SkillRestriction restricted;
@@ -38,12 +40,24 @@ public class Skill {
 
 	private int totalvalue;
 
+	public Skill(){
+
+	}
+
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getDescription() {
@@ -195,6 +209,9 @@ public class Skill {
 
 	public void setKnowledge(boolean knowledge) {
 		this.knowledge = knowledge;
+		if(knowledge){
+			type = SkillType.KNOWLEDGE;
+		}
 	}
 
 	public boolean isExotic() {

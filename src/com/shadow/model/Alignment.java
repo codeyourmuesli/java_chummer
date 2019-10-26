@@ -1,6 +1,6 @@
 package com.shadow.model;
 
-public enum Algnment {
+public enum Alignment {
 
 	 POSITIVE,
 

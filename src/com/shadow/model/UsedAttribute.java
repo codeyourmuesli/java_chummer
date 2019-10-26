@@ -1,6 +1,6 @@
 package com.shadow.model;
 
-enum UsedAttribute {
+public enum UsedAttribute {
     AGILITY,
 
     BODY,

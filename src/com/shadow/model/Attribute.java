@@ -66,6 +66,53 @@ public class Attribute {
         this.totalvalue = totalvalue;
     }
 
+    public static UsedAttribute getUsedAttributeByString(String name){
+        switch (name){
+            case "BOD":
+                return UsedAttribute.BODY;
+
+            case "AGI":
+               return UsedAttribute.AGILITY;
+
+            case "REA":
+               return UsedAttribute.REACTION;
+
+            case "STR":
+               return UsedAttribute.STRENGTH;
+
+            case "CHA":
+               return UsedAttribute.CHARISMA;
+
+            case "INT":
+               return UsedAttribute.INTUITUTION;
+
+            case "LOG":
+               return UsedAttribute.LOGIC;
+
+            case "WIL":
+               return UsedAttribute.WILLPOWER;
+
+            case "INI":
+               return UsedAttribute.INITIATIVE;
+
+            case "EDG":
+               return UsedAttribute.EDGE;
+
+            case "MAG":
+               return UsedAttribute.MAGIC;
+
+            case "RES":
+               return UsedAttribute.RESONANCE;
+
+            case "ESS":
+               return UsedAttribute.ESSENCE;
+
+            default:
+               return UsedAttribute.NOT_SET;
+
+        }
+    }
+
     @Override
     public String toString() {
         return "Attribute{" +

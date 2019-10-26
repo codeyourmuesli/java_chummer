@@ -1,27 +1,28 @@
 package com.shadow.model;
 
-public enum UsedAttribute {
+enum UsedAttribute {
+    AGILITY,
 
+    BODY,
 
+    CHARISMA,
 
-	  BODY,
+    EDGE,
 
-	  AGILITY,
+    INTUITUTION,
 
-	  REACTION,
+    LOGIC,
 
-	  STRENGTH,
+    MAGIC,
 
-	  CHARISMA,
+    REACTION,
 
-	  INTUITUTION,
+    RESONANCE,
 
-	  LOGIC,
+    STRENGTH,
 
-	  WILLPOWER,
+    INITIATIVE,
 
-	  RESONANCE,
-
-	  MAGIC;
-
+    WILLPOWER, ESSENCE,
+    NOT_SET;
 }

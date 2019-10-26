@@ -1,5 +1,6 @@
 package com.shadow.controller;
 
+import com.shadow.model.XML_Char;
 import com.shadow.view.FXController;
 import com.shadow.view.FXWindow;
 import com.shadow.view.View;
@@ -16,6 +17,9 @@ public class Main {
         Main m = new Main();
     }
     public Main(){
+        XMLHandler xml_handler= new XMLHandler("");
+        System.out.println("Char ende");
+        System.out.println(xml_handler.getLoaded_char().xml_Attributes.toString());
         View.startFxWindow();
         //RunnerGenerator rg = new RunnerGenerator();
         //rg.generate();

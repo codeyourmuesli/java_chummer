@@ -1,5 +1,6 @@
 package com.shadow.controller;
 
+import com.shadow.model.Character;
 import com.shadow.model.XML_Char;
 
 import javax.xml.stream.XMLEventReader;
@@ -120,9 +121,10 @@ public class XMLHandler {
             }
             //every xml value is loaded into myMap
             xmlChar.setXMLAttributes(myMap);
+            Character character = xmlChar.createChar();
             loaded_char = xmlChar;
-            System.out.println(loaded_char.toString());
-            System.out.println(myMap.toString());
+            //System.out.println(loaded_char.toString());
+            System.out.println(character);
         } catch (FileNotFoundException | XMLStreamException e1) {
             e1.printStackTrace();
         }

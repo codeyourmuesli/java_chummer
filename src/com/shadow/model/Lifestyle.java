@@ -2,18 +2,17 @@ package com.shadow.model;
 
 public enum Lifestyle {
 
-	;
 
-	private int STREET;
+	STREET,
 
-	private int SQATTER;
+	 SQATTER,
 
-	private int LOW;
+	 LOW,
 
-	private int MIDDLE;
+	 MIDDLE,
 
-	private int HIGH;
+	 HIGH,
 
-	private int LUXURY;
+	 LUXURY;
 
 }

@@ -207,6 +207,39 @@ public class Attributes {
 		}
 	}
 
+	public Attribute getAttributeByEnum(UsedAttribute usedAttribute){
+        switch (usedAttribute){
+            case BODY:
+                return body;
+            case AGILITY:
+                return agility;
+            case REACTION:
+                return reaction;
+            case STRENGTH:
+                return  strength;
+            case CHARISMA:
+                return charisma;
+            case INTUITUTION:
+                return intuition;
+            case LOGIC:
+                return logic;
+            case WILLPOWER:
+                return willpower;
+            case INITIATIVE:
+                return init;
+            case EDGE:
+                return edgeTotal;
+            case MAGIC:
+                return magic;
+            case RESONANCE:
+                return resonance;
+            case ESSENCE:
+                return essence;
+            default:
+                return null;
+        }
+    }
+
     @Override
     public String toString() {
         return "Attributes{" +

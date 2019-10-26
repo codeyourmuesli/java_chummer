@@ -87,7 +87,7 @@ public class XML_Char {
 	private String armors;
     private String weapons;
     private String cyberwares;
-    private String qualities;
+    private List<Quality> qualities;
     private String lifestyles;
     private List<Gear> gears = new ArrayList<>();
     private List<Car> vehicles = new ArrayList<>();;
@@ -444,7 +444,7 @@ public class XML_Char {
                      createCyberwares((HashMap<String, Object>) valueMap.get(key));
                     break;
                  case "qualities":
-                     createQualities((HashMap<String, Object>) valueMap.get(key));
+                     qualities = createQualities((HashMap<String, Object>) valueMap.get(key));
                     break;
                  case "lifestyles":
                      createLifestyles((HashMap<String, Object>) valueMap.get(key));
@@ -668,8 +668,9 @@ public class XML_Char {
 
         }
 
-        private void createQualities(HashMap<String, Object> valueMap) {
-
+        private List<Quality> createQualities(HashMap<String, Object> valueMap) {
+            List<Quality> qualities = new ArrayList<>();
+            return qualities;
         }
 
         private void createLifestyles(HashMap<String, Object> valueMap) {
@@ -720,6 +721,28 @@ public class XML_Char {
 
         private void createImprovementGroups(HashMap<String, Object> valueMap) {
 
+        }
+
+        private Description createDescription(){
+            // define Metatype
+            Metatyp metatype = Metatyp.HUMAN;
+            // define Lifestyle
+            Lifestyle lifestyle = Lifestyle.STREET;
+            int age = Integer.parseInt(this.age);
+            int weight = Integer.parseInt(this.weight);
+            double height = Double.parseDouble(this.height);
+            return new Description(name, alias, metatype, eyes, lifestyle, age, sex, weight, height, hair, skin,
+                    mugshot, description, background, notes);
+        }
+
+        public Character createChar(){
+            Description description = createDescription();
+            int karma = Integer.parseInt(this.karma);
+            int totalKarma = Integer.parseInt(this.totalkarma);
+            int notoriety = Integer.parseInt(this.notoriety);
+            int carryingCapacyty = 0;
+            return new Character( description, karma, totalKarma, notoriety, carryingCapacyty, attributes, qualities,
+                    skills, skillgroups, gears);
         }
 
 

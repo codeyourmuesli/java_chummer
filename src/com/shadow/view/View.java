@@ -1,5 +1,7 @@
 package com.shadow.view;
 
+import com.shadow.model.Character;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -26,9 +28,11 @@ public class View {
         }
         return back;
     }
-    public static void startFxWindow(){
+
+    public static FXWindow startFxWindow(){
         FXWindow fxw = new FXWindow();
         fxw.begin(null);
+        return fxw;
     }
 
     public String getInputString(String arg) {

@@ -1,5 +1,8 @@
 package com.shadow.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Attributes {
 
 	private Attribute body;
@@ -261,4 +264,21 @@ public class Attributes {
                 ", magic=" + magic +
                 '}';
     }
+
+	public List<Attribute> toList() {
+		List<Attribute> attributes = new ArrayList<>();
+		attributes.add(body);
+		attributes.add(agility);
+		attributes.add(reaction);
+		attributes.add(strength);
+		attributes.add(charisma);
+		attributes.add(intuition);
+		attributes.add(logic);
+		attributes.add(willpower);
+		attributes.add(edgeTotal);
+		attributes.add(magic);
+		attributes.add(resonance);
+		return attributes;
+
+	}
 }

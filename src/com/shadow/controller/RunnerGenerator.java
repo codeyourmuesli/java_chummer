@@ -103,4 +103,11 @@ public class RunnerGenerator {
     public void selectMetatype(Metatyp metatyp, String metavariante){
 
     }
+    public void loadContent(){
+        XMLRessourceLoader xmlRessourceLoader = new XMLRessourceLoader();
+    }
+    public void presentContent(){
+        loadContent();
+        //present
+    }
 }

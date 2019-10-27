@@ -44,6 +44,14 @@ public class Character {
         this.gear = gear;
     }
 
+    public Attributes getAttributes() {
+        return attributes;
+    }
+
+    public void setAttributes(Attributes attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public String toString() {
         return "Character{" + "\n" +

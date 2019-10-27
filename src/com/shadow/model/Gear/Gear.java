@@ -2,18 +2,85 @@ package com.shadow.model.Gear;
 
 public class Gear {
 
-	private int name;
+	protected String id;
+	
+	protected String name;
 
-	private int cost;
+	protected int cost;
 
-	private int availability;
+	protected int availability;
 
-	private int concealability;
+	protected int concealability;
 
-	private Classification classification;
+	protected Classification classification;
 
-	private String group = "BandE/Drugs/whatever";
+	protected String group = "BandE/Drugs/whatever";
 
-	private License license;
+	protected License license;
 
+    public Gear() {
+    }
+
+    public Gear(String id, String name, int cost, int availability, Classification classification) {
+        this.id = id;
+        this.name = name;
+        this.cost = cost;
+        this.availability = availability;
+        this.classification = classification;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+
+    public int getAvailability() {
+        return availability;
+    }
+
+    public void setAvailability(int availability) {
+        this.availability = availability;
+    }
+
+    public Classification getClassification() {
+        return classification;
+    }
+
+    public void setClassification(Classification classification) {
+        this.classification = classification;
+    }
+
+    public void setClassificationByInt(int i) {
+        switch (i){
+            case 0:
+                this.classification = Classification.LEGAL;
+                break;
+            case 1:
+                this.classification = Classification.RESTRICTED;
+                break;
+            case 2:
+                this.classification = Classification.ILLEGAL;
+                break;
+
+        }
+    }
 }
